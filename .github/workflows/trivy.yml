@@ -34,17 +34,17 @@ jobs:
           vuln-type: 'os,library'
           severity: 'CRITICAL,HIGH'
 
-      - name: Upload MobSF Analysis JSON Result
-        uses: actions/upload-artifact@v2
-        with:
-          name: trivy-report.json
-          path: trivy-report.json
+      #- name: Upload MobSF Analysis JSON Result
+      #  uses: actions/upload-artifact@v2
+      #  with:
+      #    name: trivy-report.json
+      #    path: trivy-report.json
 
       - name: Get values from the package.json
         id: packageJson
         uses: RadovanPelka/github-action-json@main
         with:
-          path: "trivy-report.json" # default value
+          path: trivy-report.json # default value
 
       - run: echo "name - ${{ steps.packageJson.outputs.ImageID }}"
           
