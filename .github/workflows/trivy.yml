@@ -56,5 +56,4 @@ jobs:
       
       - run: |
           echo ${{steps.json_properties.outputs.ArtifactName}}
-          echo ${{steps.json_properties.outputs.Metadata.OS.Family}}
-          echo ${{steps.json_properties.outputs.Metadata.OS.Name}}
+          echo ${{steps.json_properties.outputs.Metadata.ImageID}}
