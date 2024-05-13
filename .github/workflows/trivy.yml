@@ -55,4 +55,4 @@ jobs:
           file_path: "trivy-report.json"
       
       - run: |
-          echo ${{steps.json_properties.outputs.ImageID}}
+          echo ${{steps.json_properties.outputs.ArtifactName}}
