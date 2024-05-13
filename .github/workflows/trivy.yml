@@ -28,7 +28,8 @@ jobs:
         with:
           image-ref: 'docker.io/pietrodematteis/helloworld-demo-node:main'
           format: 'json'
-          output: 'trivy-report.json'
+          #output: 'trivy-report.json'
+          output: '/home/runner/work/helloworld-demo-node/helloworld-demo-node/trivy-report.json'
           exit-code: '0'
           ignore-unfixed: true
           vuln-type: 'os,library'
